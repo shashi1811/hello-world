@@ -13,28 +13,12 @@
 					  "containerPort": 8080
 					}
 				]
-            }, 
-			{
-                "name": "shash-ecr",
-                "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
-                "essential": true,
-                "environment": [],
-				"portMappings": [
-					{
-					  "hostPort": 8000,
-					  "protocol": "tcp",
-					  "containerPort": 8000
-					}
-				],
-				"command": [
-					"-port=8000",
-					"-storage_driver=wavefront",
-					"-storage_driver_options=storage_driver_wf_proxy_host=YOUR_PROXY_ADDRESS storage_driver_wf_metric_prefix=aws.fargate.ecs."
-				]
-			}
-        ],
+            } 
+			
+        ]
         "requiresCompatibilities": [
             "FARGATE"
         ],
         "cpu": "256",
         "memory": "512"
+}
