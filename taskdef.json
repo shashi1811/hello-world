@@ -4,7 +4,7 @@
         "containerDefinitions": [
             {
                 "name": "tomcat-example",
-                "image": "tomcat:latest",
+                "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
                 "essential": true,
 				"portMappings": [
 					{
@@ -15,7 +15,7 @@
 				]
             }, 
 			{
-                "name": "fargate-metrics-collector",
+                "name": "shash-ecr",
                 "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
                 "essential": true,
                 "environment": [],
