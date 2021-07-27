@@ -16,7 +16,7 @@
             } 
 			
         ]
-        "requiresCompatibilities": [
+        "requiresCompatibilities" [
             "FARGATE"
         ],
         "cpu": "256",
