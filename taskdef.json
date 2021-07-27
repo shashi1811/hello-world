@@ -1,41 +1,20 @@
 {
-        "family": "wavefront-task-def",
-        "networkMode": "awsvpc",
-        "containerDefinitions": [
-            {
-                "name": "tomcat-example",
-                "image": "tomcat:latest",
-                "essential": true,
-				"portMappings": [
-					{
-					  "hostPort": 8080,
-					  "protocol": "tcp",
-					  "containerPort": 8080
-					}
-				]
-            }, 
-			{
-                "name": "fargate-metrics-collector",
-                "image": "wavefronthq/wavefront-fargate-collector:latest",
-                "essential": true,
-                "environment": [],
-				"portMappings": [
-					{
-					  "hostPort": 8000,
-					  "protocol": "tcp",
-					  "containerPort": 8000
-					}
-				],
-				"command": [
-					"-port=8000",
-					"-storage_driver=wavefront",
-					"-storage_driver_options=storage_driver_wf_proxy_host=YOUR_PROXY_ADDRESS storage_driver_wf_metric_prefix=aws.fargate.ecs."
-				]
-			}
-        ],
-        "requiresCompatibilities": [
+    "family": "hello-world",
+    "containerDefinitions": [
+        {
+            "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
+            "name": "hello-world",
+            "cpu": "256",
+            "memory": "512"
+			"requiresCompatibilities": [
             "FARGATE"
-        ],
-        "cpu": "256",
-        "memory": "512"
+            ],
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80
+                }
+            ]
+        }
+    ]
 }
