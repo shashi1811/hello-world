@@ -21,7 +21,5 @@
         ],
   "cpu": "2048",
   "memory": "4096",
-  "inferenceAccelerators": null,
-  "proxyConfiguration": null,
   "volumes": []
 }
