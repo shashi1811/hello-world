@@ -59,12 +59,12 @@
   ],
   "placementConstraints": [],
   "memory": "4096",
-  "taskRoleArn": "arn:aws:iam::311778411820:role/tomcat-example-service",
+  "taskRoleArn": "arn:aws:iam::311778411820:role/ecs-phoenix-task-execution-role",
   "compatibilities": [
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:ap-south-1:311778411820:task-definition/tomcat-example-service",
+  "taskDefinitionArn": "arn:aws:ecs:ap-south-1:311778411820:task-definition/ecs-phoenix-task-execution-role",
   "family": "tomcat-example-service",
   "requiresAttributes": [
     {
