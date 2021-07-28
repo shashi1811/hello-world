@@ -64,7 +64,7 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:ap-south-1:311778411820:task-definition/ecs-phoenix-task-execution-role",
+  "taskDefinitionArn": "arn:aws:ecs:ap-south-1:311778411820:task-definition/tomcat-jenkins-ci-cd",
   "family": "tomcat-example-service",
   "requiresAttributes": [
     {
