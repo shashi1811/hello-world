@@ -20,7 +20,7 @@
           "FARGATE"
         ],
   "cpu": "2048",
-  "status": "ACTIVE",
+  "memory": "4096",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
   "volumes": []
