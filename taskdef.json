@@ -1,5 +1,5 @@
 {
-    "family": "first-run-task-definition",
+    "family": "sample-app",
     "executionRoleArn": "arn:aws:iam::311778411820:role/ecs-phoenix-task-execution-role",
     "networkMode": "awsvpc",
     "containerDefinitions": [
