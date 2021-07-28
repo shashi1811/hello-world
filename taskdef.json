@@ -1,18 +1,27 @@
 {
-    "family": "shashikant",
-    "containerDefinitions": [
-        {
-            "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
-            "name": "shashikant",
-            "cpu": 10,
-            "memory": 256,
-            "essential": true,
-            "portMappings": [
-                {
-                    "containerPort": 80,
-                    "hostPort": 80
-                }
-            ]
-        }
-    ]
+        "family": "wavefront-task-def",
+        "networkMode": "awsvpc",
+        "containerDefinitions": [
+            {
+                "name": "tomcat-example",
+                "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
+                "essential": true,
+				"portMappings": [
+					{
+					  "hostPort": 8080,
+					  "protocol": "tcp",
+					  "containerPort": 8080
+					}
+				]
+            } 
+			
+        ],
+       "requiresCompatibilities": [
+          "FARGATE"
+        ],
+  "cpu": "2048",
+  "status": "ACTIVE",
+  "inferenceAccelerators": null,
+  "proxyConfiguration": null,
+  "volumes": []
 }
